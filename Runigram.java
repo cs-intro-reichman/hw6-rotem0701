@@ -124,7 +124,7 @@ public class Runigram {
 		int red = pixel.getRed();
 		int green = pixel.getGreen();
 		int blue = pixel.getBlue();
-		int lum = (int) Math.round(red * 0.299 +  green * 0.587 + blue * 0.114);
+		int lum = (int) (red * 0.299 +  green * 0.587 + blue * 0.114);
 		
 		//The Value should be between 0 and 225
 		lum = Math.min(255, Math.max(0, lum));
