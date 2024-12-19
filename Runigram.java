@@ -180,16 +180,11 @@ public class Runigram {
 		int green2 = c2.getGreen();
 		int blue2 = c2.getBlue();
 		
-		int NewRed = (int) Math.round(alpha * red1 + (1 - alpha) * red2);
-		int NewGreen = (int) Math.round(alpha * green1 + (1 - alpha) * green2);
-		int NewBlue = (int) Math.round(alpha * blue1 + (1 - alpha) * blue2);
+		int newRed = (int) (alpha * red1 + (1 - alpha) * red2);
+		int newGreen = (int) (alpha * green1 + (1 - alpha) * green2);
+		int newBlue = (int) (alpha * blue1 + (1 - alpha) * blue2);
 		
-		//The Value should be between 0 and 225
-		NewRed = Math.min(255, Math.max(0, NewRed));
-		NewGreen = Math.min(255, Math.max(0, NewGreen));
-		NewBlue = Math.min(255, Math.max(0, NewBlue));
-		
-		return new Color(NewRed, NewGreen, NewBlue);
+		return new Color(newRed, newGreen, newBlue);
 
 	}
 	
