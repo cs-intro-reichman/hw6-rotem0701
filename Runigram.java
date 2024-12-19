@@ -230,7 +230,7 @@ public static void morph(Color[][] source, Color[][] target, int n) {
     setCanvas(source);
 
     for (int i = 0; i < n; i++) {
-        double alpha = (double) i / (n - 1); 
+        double alpha = 1 - (double) i / (n - 1); 
         Color[][] blended = blend(source, scaledTarget, alpha); 
         display(blended); 
         StdDraw.pause(500); 
